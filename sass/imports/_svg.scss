@@ -1,0 +1,83 @@
+@keyframes rotate{
+    0%{ transform: rotate(0deg); }
+    40%{ transform: rotate(360deg); }
+    60%{ transform: rotate(360deg); }
+    100%{ transform: rotate(720deg); }
+}
+
+@mixin rotate_clockwise {
+    margin: 100px;
+    animation-duration: 20s;
+    animation-name: rotate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@mixin rotate_anticlockwise {
+    margin: 100px;
+    animation-duration: 20s;
+    animation-name: rotate;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+    animation-timing-function: ease-in-out;
+}
+
+.top_circle_image {
+   @include rotate_clockwise();
+    transform-origin: 318px 112px ;
+}
+
+.top_left_circle_image {
+    @include rotate_clockwise();
+    transform-origin: 113px 239px;
+}
+
+.bottom_left_circle_image {
+    @include rotate_clockwise();
+    transform-origin: 120px 481px  ;
+}
+
+.bottom_circle_image {
+    @include rotate_clockwise();
+    transform-origin: 332px 592px  ;
+}
+
+.top_right_circle_image {
+    @include rotate_anticlockwise();
+    transform-origin: 531px 228px  ;
+}
+
+.bottom_right_circle_image {
+    @include rotate_anticlockwise();
+    transform-origin: 535px 466px  ;
+}
+
+.main_circle_image {
+    @include rotate_anticlockwise();
+    transform-origin: 327px 365px;
+}
+
+.bottom_polygon {
+    @include rotate_anticlockwise();
+    transform-origin: 327px 365px;
+}
+
+.top_polygon {
+    @include rotate_clockwise();
+    transform-origin: 327px 365px;
+}
+
+.polygon_frame {
+    @include rotate_clockwise();
+    transform-origin: 327px 365px  ;
+}
+
+.polygon_frame_reverse {
+    @include rotate_anticlockwise();
+    transform-origin: 327px 365px ;
+}
+
+
+
+
+
