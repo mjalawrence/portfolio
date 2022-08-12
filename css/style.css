@@ -124,30 +124,7 @@ body {
   margin: 0 auto;
   font-family: "Jaldi";
   background-color: #f7f1c3;
-  color: #f7f1c3;
-}
-
-.sticky {
-  position: sticky;
-  top: 0;
-}
-
-.sticky_projects {
-  position: sticky;
-  top: -600px;
-}
-
-.bottom_sticky {
-  z-index: 0;
-  position: sticky;
-  top: 0px;
-  background-color: #f7f1c3;
-}
-
-.top_container {
-  position: sticky;
-  top: 0;
-  z-index: -3;
+  color: #FFF;
 }
 
 .michael {
@@ -160,14 +137,14 @@ body {
 }
 
 nav {
-  background-color: #2E6473;
+  background-color: #4C93AA;
   padding: 20px 0 20px 0;
 }
 
 .nav_stripe {
   display: flex;
   justify-content: space-between;
-  border: solid #f7f1c3 1px;
+  border: solid #fff 1px;
   border-right: 0;
   border-left: 0;
   padding: 0;
@@ -186,7 +163,7 @@ nav {
 
 a {
   text-decoration: none;
-  color: #f7f1c3;
+  color: #FFF;
 }
 
 ul {
@@ -196,7 +173,7 @@ ul {
 li {
   margin: 0 30px;
   font-size: 2.3vw;
-  color: #f7f1c3;
+  color: #FFF;
 }
 
 header {
@@ -212,19 +189,18 @@ header {
 }
 
 .welcome_container {
-  opacity: 0;
   width: 50%;
   margin: 50px 50px 0 0;
   display: flex;
   align-items: center;
   flex-direction: column;
-  color: #2E6473;
+  color: #380613;
 }
 
 .greeting_stripe {
   display: flex;
   justify-content: space-between;
-  border: solid #2E6473 1px;
+  border: solid #380613 1px;
   border-right: 0;
   border-left: 0;
   padding: 0;
@@ -271,11 +247,10 @@ header {
 }
 
 .learn a {
-  color: #2E6473;
+  color: #380613;
 }
 
 .about_container {
-  z-index: -2;
   width: 100%;
   background-color: #CA4B4B;
   padding: 20px 0 20px 0;
@@ -285,7 +260,7 @@ header {
   background-color: #CA4B4B;
   display: flex;
   justify-content: space-between;
-  border: solid #f7f1c3 1px;
+  border: solid #fff 1px;
   border-right: 0;
   border-left: 0;
 }
@@ -321,15 +296,16 @@ header {
 }
 
 .project_container_stripe {
-  z-index: -1;
-  padding: 20px 0 20px 0;
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   background-color: #628D48;
 }
 
 .projects_container {
   width: 100%;
   background-color: #628D48;
-  border: solid #f7f1c3 1px;
+  border: solid #fff 1px;
   border-right: 0;
   border-left: 0;
 }
@@ -387,6 +363,7 @@ header {
 }
 
 .contact_padding {
+  margin: 20px 0 20px 0;
   padding-top: 20px;
   padding-bottom: 20px;
   background-color: #CA9F4B;
@@ -394,7 +371,7 @@ header {
 
 .contact_container {
   background-color: #CA9F4B;
-  border: solid #f7f1c3 1px;
+  border: solid #fff 1px;
   border-right: 0;
   border-left: 0;
   text-align: center;
@@ -449,24 +426,12 @@ form .message {
   margin-bottom: 20px;
 }
 
-.copyright_info {
+.footer {
   color: #35395E;
   font-size: 1.5vw;
   display: block;
   text-align: center;
   padding-bottom: 15px;
-}
-
-.socials {
-  display: block;
-  text-align: center;
-  font-size: 2.5vw;
-}
-
-.fa {
-  color: #35395E;
-  padding: 20px;
-  text-align: center;
 }
 
 .back_to_top {

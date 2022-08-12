@@ -4,12 +4,20 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="sass/style.css" />
     <link href='https://fonts.googleapis.com/css?family=Jaldi' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/2328fcd1b3.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous" defer></script>
+    <script src="index.js" defer></script>
     <title>Mike Lawrence Portfolio</title>
 </head>
 <body>
+    <div class="top_container fadein-scroll-top">
+
     <nav id="top">
-        <div class="stripe">
+        <div class="nav_stripe">
             <div class="michael">
                 <h2>
                     <a class="home_button" href="#about">Mike lawrence</a>
@@ -83,9 +91,9 @@
                 <image class="main_circle_image" x="218" y="253" width="217" height="217" href="images/MEWFOL copy 6.png" clip-path="url(#main_circle)" />
             </svg>
         </div>
-        <div class="welcome_container">
+        <div class="welcome_container fade_on_load">
             <div class="stripe_padding">
-                <div class="stripe">
+                <div class="greeting_stripe">
                     <div class="welcome_message">
                         <h1>Greetings!</h1>
                         <h2>I'm Mike</h2>
@@ -98,7 +106,9 @@
             </div>
         </div>
     </header>
-    <div class="about_container" id="about">
+    </div>
+
+    <div class="about_container parallax_scroll_about" id="about">
         <div class="about_stripe">
             <div class="intro_text">
                 <h1>About Me</h1>
@@ -109,8 +119,8 @@
             </div>
         </div>
     </div>
-    <div class="project_container_stripe" id="projects">
-        <div class="projects_container">
+    <div class="project_container_stripe parallax_scroll_projects" id="projects">
+        <div class="projects_container ">
             <h1>Projects</h1>
             <div class="projects_stripe">
                 <div class="project_container">
@@ -128,7 +138,7 @@
                     </div>
                 </div>
             </div>
-            <div class="projects_stripe">
+            <div class="projects_stripe ">
                 <div class="project_container">
                     <div class="screenshot_container" style="background-image: url('images/pennyLaneMain.png')">
                     </div>
@@ -162,8 +172,9 @@
             </div>
         </div>
     </div>
+    <div class="bottom_sticky parallax_scroll_bottom">
     <div class="contact_padding" id="contact">
-        <div class="contact_container">
+        <div class="contact_container parallax_scroll">
             <h1>
                 Contact
             </h1>
@@ -179,22 +190,24 @@
                     <input type="text" name="email" required/>
                 </label>
                 <label>Message*:
-                    <input class="message" name="message" type="text" required/>
+                    <textarea class="message" name="message"  contenteditable="true" required > </textarea>
                 </label>
                 <input type="submit" value="Submit" />
             </form>
         </div>
     </div>
-    <div class="thank_you_modal">Thanks for contacting me. I will get back to you as soon as I can!
-    <button type="button">X</button>
+    <div class="socials">
+        <a href="https://www.linkedin.com/in/michael-lawrence-1513629b/" class="fa fa-linkedin"></a>
+        <a href="https://github.com/mjalawrence" class="fa fa-github"></a>
+        <a href="https://www.instagram.com/50far50good/" class="fa fa-instagram"></a>
+        <a href="https://www.youtube.com/channel/UCjEvk-Nj6O6DHHnTpS_DdUg" class="fa fa-youtube"></a>
     </div>
+    <div class="copyright_info">
+    © Copyright 2022 | Website created by Mike Lawrence
+    <br>
+    [ Artwork by Miles Wragg (@euklidean) | Animation by Mike Lawrence ]
+    </div>
+</div>
     <a class="back_to_top" href="#top">Back to the top</a>
 </body>
-<footer>
-    <div class="footer">
-        © Copyright 2022 | Website created by Michael Lawrence
-        <br>
-        [ Artwork by Miles Wragg (@euklidean) | Animation by Michael Lawrence ]
-    </div>
-</footer>
 </html>
