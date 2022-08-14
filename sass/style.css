@@ -342,7 +342,8 @@ header {
   margin-bottom: 20px; }
 
 .more_info {
-  display: flex; }
+  display: flex;
+  justify-content: space-between; }
 
 .more_info a {
   border: solid 1px #628D48; }
