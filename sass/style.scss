@@ -57,7 +57,7 @@ body {
 }
 
 .bottom_sticky {
-    z-index: 0;
+    z-index: 400;
     position: sticky;
     top: 0px;
     background-color: $background_color;
@@ -66,7 +66,7 @@ body {
 .top_container {
     position: sticky;
     top: 0;
-    z-index: -3;
+    z-index: 1;
 }
 
 .michael {
@@ -81,6 +81,7 @@ body {
 nav {
     background-color: $nav_bar_color;
     padding: 20px 0 20px 0;
+
 }
 
 .nav_stripe {
@@ -93,16 +94,19 @@ nav {
 .nav_bar_list_container {
     @include flex_center;
     margin-right: 100px;
+
 }
 
 .nav_list {
     display: flex;
     list-style-type: none;
+
 }
 
 a {
     text-decoration: none;
     color: $main_font_color;
+    z-index: 1;
 }
 
 ul {
@@ -190,7 +194,8 @@ header {
 }
 
 .about_container {
-    z-index: -2;
+    position: sticky;
+    z-index: 100;
     width: 100%;
     background-color: $about_color;
     padding: 20px 0 20px 0;
@@ -225,13 +230,9 @@ header {
     @include image_container;
 }
 
-.read_more {
-    position: fixed;
-    visibility: hidden;
-}
-
 .project_container_stripe {
-    z-index: -1;
+    position: sticky;
+    z-index: 200;
     padding: 20px 0 20px 0;
     background-color: $project_color;
 }
@@ -279,17 +280,159 @@ header {
 }
 
 .project_description p {
-    font-size: 1.8vw;
+    font-size: 2.2vw;
     margin-top: 0;
     margin-bottom: 20px;
 }
 
-.project_text a {
-    margin-top: 10px;
-    font-size: 3vw;
+.more_info {
+    display: flex;
+}
+
+.read_more {
+    font-size: 2.5vw;
+    color: $main_font_color;
     border-radius: 10px;
     border: solid 1px white;
     padding: 0 10px 0 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.project_link {
+    font-size: 2.5vw;
+    border-radius: 10px;
+    border: solid 1px white;
+    padding: 0 10px 0 10px;
+    margin-right: 10px;
+}
+
+.project_link .fa {
+    color: $main_font_color;
+}
+
+.full_desc {
+    display: none;
+}
+
+.description_header {
+    position: relative;
+}
+
+.description_stripe {
+    border-top: solid 1px $main_font_color;
+}
+
+#food_delivered_container {
+    position: relative;
+}
+
+#food_delivered_description {
+    position: absolute;
+    margin: 10px;
+    border: solid 1px white;
+    border-radius: 10px;
+    background-color: #385228;
+    opacity: 0.95;
+    font-size: 2.1vw;
+    z-index: 199;
+    padding: 10px;
+}
+
+#close_food_delivered_desc_button {
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#food_delivered_description h2 {
+    text-align: center;
+    margin: 0;
+    opacity: 1;
+}
+
+#food_delivered_description p {
+    opacity: 1;
+    margin: 0;
+    padding: 0px 10px 0px 20px;
+}
+
+#penny_lane_container {
+    position: relative;
+}
+
+#penny_lane_description {
+    position: absolute;
+    margin: 10px;
+    border: solid 1px white;
+    border-radius: 10px;
+    background-color: #385228;
+    opacity: 0.95;
+    font-size: 2.1vw;
+    z-index: 199;
+    padding: 10px;
+}
+
+#close_penny_desc_button {
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#penny_lane_description h2 {
+    text-align: center;
+    margin: 0;
+    opacity: 1;
+}
+
+#penny_lane_description p {
+    opacity: 1;
+    margin: 0;
+    padding: 0px 10px 10px 20px;
+}
+
+
+#gopher_glory_container {
+    position: relative;
+}
+
+#gopher_glory_description {
+    position: absolute;
+    margin: 10px;
+    border: solid 1px white;
+    border-radius: 10px;
+    background-color: #385228;
+    opacity: 0.95;
+    font-size: 2.1vw;
+    z-index: 199;
+    padding: 10px;
+}
+
+#close_gopher_desc_button {
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#gopher_glory_description h2 {
+    text-align: center;
+    margin: 0;
+    opacity: 1;
+}
+
+#gopher_glory_description p {
+    opacity: 1;
+    margin: 0;
+    padding: 0px 10px 10px 20px;
 }
 
 .contact_padding {
@@ -301,6 +444,7 @@ header {
 
 .contact_container {
     background-color: $contact_color;
+    color: #FFF;
     @include stripe();
     text-align: center;
 }
@@ -366,25 +510,31 @@ form .message {
 .socials {
     display: block;
     text-align: center;
-    font-size: 2.5vw;
+    font-size: 4.5vw;
 }
 
-.fa {
+.socials .fa {
     color: $footer_color;
-    padding: 20px;
     text-align: center;
+    padding: 10px;
 }
 
 .back_to_top {
     border-radius: 5px;
     background-color: crimson;
     position: sticky;
+    z-index: 500;
     bottom: 10px;
     left: 10000px;
     width: 100px;
     text-align: center;
     padding: 2px;
     margin-right: 20px;
+    opacity: 0;
+}
+
+.show {
+    opacity: 1;
 }
 
 
