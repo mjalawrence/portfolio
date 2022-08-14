@@ -133,7 +133,13 @@ body {
   margin: 0 0 0 120px; }
 
 .michael h2 {
-  margin: 0; }
+  margin: 0;
+  border: #2E6473 solid 1px;
+  border-radius: 5px; }
+
+.about_link:hover {
+  border: #f7f1c3 solid 1px;
+  border-radius: 5px; }
 
 nav {
   background-color: #2E6473;
@@ -160,6 +166,15 @@ a {
   text-decoration: none;
   color: #f7f1c3;
   z-index: 1; }
+
+ul a {
+  border: #2E6473 solid 1px;
+  padding: 0 5px 0 5px; }
+
+ul a:hover {
+  border: #f7f1c3 solid 1px;
+  border-radius: 5px;
+  padding: 0 5px 0 5px; }
 
 ul {
   margin: 0; }
@@ -231,7 +246,14 @@ header {
   border-radius: 10px; }
 
 .learn a {
-  color: #2E6473; }
+  color: #2E6473;
+  border: #f7f1c3 solid 1px;
+  padding: 0 5px 0 5px; }
+
+.learn a:hover {
+  border: #2E6473 solid 1px;
+  border-radius: 5px;
+  padding: 0 5px 0 5px; }
 
 .about_container {
   position: sticky;
@@ -322,11 +344,16 @@ header {
 .more_info {
   display: flex; }
 
+.more_info a {
+  border: solid 1px #628D48; }
+
+.more_info a:hover {
+  border: solid 1px #f7f1c3; }
+
 .read_more {
   font-size: 2.5vw;
   color: #f7f1c3;
   border-radius: 10px;
-  border: solid 1px white;
   padding: 0 10px 0 10px;
   margin-right: 10px;
   cursor: pointer; }
@@ -334,11 +361,13 @@ header {
 .project_link {
   font-size: 2.5vw;
   border-radius: 10px;
-  border: solid 1px white;
   padding: 0 10px 0 10px;
   margin-right: 10px; }
 
 .project_link .fa {
+  color: #f7f1c3; }
+
+.project_link .fa-brands {
   color: #f7f1c3; }
 
 .full_desc {
@@ -486,12 +515,15 @@ input[type=submit] {
   background-color: transparent;
   font-family: "Jaldi";
   width: 150px;
-  border: white solid 1px;
-  border-radius: 5px;
+  border: #CA9F4B solid 1px;
   margin: 0 auto;
   display: block;
   cursor: pointer;
   margin-bottom: 30px; }
+
+input[type=submit]:hover {
+  border: white solid 1px;
+  border-radius: 5px; }
 
 form .message {
   font-size: 2vw;
@@ -531,6 +563,10 @@ form .message {
   padding: 2px;
   margin-right: 20px;
   opacity: 0; }
+
+.back_to_top:hover {
+  background-color: #f7f1c3;
+  color: crimson; }
 
 .show {
   opacity: 1; }

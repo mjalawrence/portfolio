@@ -76,12 +76,19 @@ body {
 
 .michael h2 {
     margin: 0;
+    border: $nav_bar_color solid 1px;
+    border-radius: 5px;
+}
+
+
+.about_link:hover {
+    border: $main_font_color solid 1px;
+    border-radius: 5px;
 }
 
 nav {
     background-color: $nav_bar_color;
     padding: 20px 0 20px 0;
-
 }
 
 .nav_stripe {
@@ -100,7 +107,6 @@ nav {
 .nav_list {
     display: flex;
     list-style-type: none;
-
 }
 
 a {
@@ -109,8 +115,20 @@ a {
     z-index: 1;
 }
 
+ul a {
+    border: $nav_bar_color solid 1px;
+    padding: 0 5px 0 5px;
+}
+
+ul a:hover {
+    border: $main_font_color solid 1px;
+    border-radius: 5px;
+    padding: 0 5px 0 5px;
+}
+
 ul {
     margin: 0;
+
 }
 
 li {
@@ -183,14 +201,20 @@ header {
     flex-direction: column;
     font-size: 3vw;
     width: 70%;
-    //background-color: $nav_bar_color;
-
     margin-top: 20px;
     border-radius: 10px;
 }
 
 .learn a {
     color: $greeting_font_color;
+    border: $background_color solid 1px;
+    padding: 0 5px 0 5px;
+}
+
+.learn a:hover {
+    border: $greeting_font_color solid 1px;
+    border-radius: 5px;
+    padding: 0 5px 0 5px;
 }
 
 .about_container {
@@ -289,11 +313,19 @@ header {
     display: flex;
 }
 
+.more_info a {
+    border: solid 1px $project_color;
+}
+
+.more_info a:hover {
+    border: solid 1px $main_font_color;
+}
+
 .read_more {
     font-size: 2.5vw;
     color: $main_font_color;
     border-radius: 10px;
-    border: solid 1px white;
+    //border: solid 1px white;
     padding: 0 10px 0 10px;
     margin-right: 10px;
     cursor: pointer;
@@ -302,12 +334,16 @@ header {
 .project_link {
     font-size: 2.5vw;
     border-radius: 10px;
-    border: solid 1px white;
+    //border: solid 1px white;
     padding: 0 10px 0 10px;
     margin-right: 10px;
 }
 
 .project_link .fa {
+    color: $main_font_color;
+}
+
+.project_link .fa-brands {
     color: $main_font_color;
 }
 
@@ -480,12 +516,16 @@ input[type=submit] {
     background-color: transparent;
     font-family: $main_font;
     width: 150px;
-    border: white solid 1px;
-    border-radius: 5px;
+    border: $contact_color solid 1px;
     margin: 0 auto;
     display: block;
     cursor: pointer;
     margin-bottom: 30px;
+}
+
+input[type=submit]:hover {
+    border: white solid 1px;
+    border-radius: 5px;
 }
 
 form .message {
@@ -531,6 +571,11 @@ form .message {
     padding: 2px;
     margin-right: 20px;
     opacity: 0;
+}
+
+.back_to_top:hover {
+    background-color: $background_color;
+    color: crimson;
 }
 
 .show {
