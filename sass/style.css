@@ -92,7 +92,7 @@ body {
 
 .sticky_projects {
   position: sticky;
-  top: -600px; }
+  bottom: 100px; }
 
 .bottom_sticky {
   z-index: 400;
@@ -679,10 +679,6 @@ form .message {
 
   .project_link {
     padding: 0 1px 0 1px; }
-
-  .sticky_projects {
-    position: sticky;
-    top: 0px; }
 
   .contact_container h1 {
     font-size: 7vw; }
