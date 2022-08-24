@@ -80,16 +80,14 @@
 * {
   box-sizing: border-box; }
 
-html, body {
-  overflow-x: hidden; }
-
 body {
   margin: 0 auto;
   font-family: "Jaldi";
   background-color: #f7f1c3;
   color: #f7f1c3;
   overflow-x: hidden;
-  width: 100%; }
+  width: 100%;
+  position: relative; }
 
 .sticky {
   position: sticky;
