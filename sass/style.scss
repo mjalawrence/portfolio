@@ -44,6 +44,8 @@ body {
     font-family: $main_font;
     background-color: $background_color;
     color: $main_font_color;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 .sticky {

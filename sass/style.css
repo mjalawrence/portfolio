@@ -84,7 +84,9 @@ body {
   margin: 0 auto;
   font-family: "Jaldi";
   background-color: #f7f1c3;
-  color: #f7f1c3; }
+  color: #f7f1c3;
+  overflow-x: hidden;
+  width: 100%; }
 
 .sticky {
   position: sticky;
