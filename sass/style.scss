@@ -752,7 +752,6 @@ form .message {
         font-size: 5vw;
     }
 
-
     .project_description p {
         margin: 0;
         font-size: 3.5vw;
@@ -817,6 +816,11 @@ form .message {
         z-index: 400;
         position: sticky;
         top: -100px;
+    }
+
+    .small_photo {
+        width: 150%;
+        height: 37vw;
     }
 }
 

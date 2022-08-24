@@ -727,6 +727,10 @@ form .message {
   .bottom_sticky {
     z-index: 400;
     position: sticky;
-    top: -100px; } }
+    top: -100px; }
+
+  .small_photo {
+    width: 150%;
+    height: 37vw; } }
 
 /*# sourceMappingURL=style.css.map */
