@@ -44,9 +44,6 @@ body {
     font-family: $main_font;
     background-color: $background_color;
     color: $main_font_color;
-    overflow-x: hidden;
-    width: 100%;
-    position: relative;
 }
 
 .sticky {
@@ -618,7 +615,7 @@ form .message {
 
 
     .nav_bar_list_container {
-        display: none;
+        display: block;
         background-color: $nav_bar_color;
         position: absolute;
         top: 4.5vw;
