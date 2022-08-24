@@ -48,12 +48,12 @@ body {
 
 .sticky {
     position: sticky;
-    top: 0;
+    top: -10px;
 }
 
 .sticky_projects {
     position: sticky;
-    bottom: 100px;
+    top: -550px;
 }
 
 .bottom_sticky {
@@ -247,6 +247,7 @@ svg {
 
 .intro_text h1 {
     font-size: 5vw;
+    margin-top: 0;
     margin-bottom: -20px;
     text-align: center;
 }
@@ -255,6 +256,7 @@ svg {
     padding-bottom: 20px;
     font-size: 1.8vw;
 }
+
 .small_photo {
     display: none;
 }
@@ -613,8 +615,26 @@ form .message {
 
 @media (max-width: 950px) {
 
+    .sticky {
+        position: sticky;
+        top: -200px;
+    }
+
+    .sticky_projects {
+        position: sticky;
+        top: -600px;
+    }
+
+    .bottom_sticky {
+        z-index: 400;
+        position: sticky;
+        top: -100px;
+    }
+
+
     .michael {
         font-size: 5vw;
+        margin-left: 2vw;
     }
 
     .hide {
@@ -701,12 +721,13 @@ form .message {
         align-items: center;
     }
 
+
     .small_photo {
         display: block;
-        margin: 10px 0 10px 5px;
+        margin: 10px 0 10px 10px;
         border-radius: 40px;
         width: 110%;
-        height: 37vw;
+        height: 27vw;
     }
 
     .large_photo {
@@ -752,11 +773,6 @@ form .message {
         padding: 0 1px 0 1px;
     }
 
-    //.sticky_projects {
-    //    position: sticky;
-    //    top: 0;
-    //}
-
     .contact_container h1 {
         font-size: 7vw;
     }
@@ -783,6 +799,24 @@ form .message {
         font-size: 3vw;
     }
 
+}
+
+@media (max-width: 700px) {
+    .sticky {
+        position: sticky;
+        top: 0;
+    }
+
+    .sticky_projects {
+        position: sticky;
+        top: 0px;
+    }
+
+    .bottom_sticky {
+        z-index: 400;
+        position: sticky;
+        top: -100px;
+    }
 }
 
 

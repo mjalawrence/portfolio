@@ -61,6 +61,10 @@ $(document).ready(function(){
 //
 // parallaxScrolling()
 
+
+
+
+
 //Parallax scrolling
 $(window).scroll(function () {
         let bottom_of_element = $(".parallax_scroll_about").offset().top + $(".parallax_scroll_about").outerHeight()
