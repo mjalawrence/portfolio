@@ -613,11 +613,10 @@ form .message {
         background-color: black;
     }
 
-
     .nav_bar_list_container {
         display: block;
         background-color: $nav_bar_color;
-        position: absolute;
+        position: fixed;
         top: 4.5vw;
         right: 10px;
         margin-right: 0;

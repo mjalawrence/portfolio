@@ -574,7 +574,7 @@ form .message {
   .nav_bar_list_container {
     display: block;
     background-color: #2E6473;
-    position: absolute;
+    position: fixed;
     top: 4.5vw;
     right: 10px;
     margin-right: 0;
