@@ -187,7 +187,7 @@ svg {
     //background-color: $nav_bar_color;
     @include flex_center;
     flex-direction: column;
-    font-size: 2vw;
+    //font-size: 2vw;
 }
 
 .welcome_message h1 {
@@ -211,7 +211,6 @@ svg {
     flex-direction: column;
     font-size: 3vw;
     width: 70%;
-    margin-top: 20px;
     border-radius: 10px;
 }
 
@@ -243,18 +242,21 @@ svg {
 
 .intro_text {
     width: 50%;
-    padding: 0 0 0 50px ;
+    padding-left: 50px;
 }
 
 .intro_text h1 {
     font-size: 5vw;
-    margin: 0 0 -20px 0;
+    margin-bottom: -20px;
     text-align: center;
 }
 
 .intro_text p {
     padding-bottom: 20px;
     font-size: 1.8vw;
+}
+.small_photo {
+    display: none;
 }
 
 .photo_container {
@@ -606,18 +608,29 @@ form .message {
     opacity: 1;
 }
 
+
 //media queries
 
 @media (max-width: 950px) {
-    body {
-        background-color: black;
+
+    .michael {
+        font-size: 5vw;
+    }
+
+    .hide {
+        display: none
+    }
+
+    .nav_stripe {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 
     .nav_bar_list_container {
-        display: block;
         background-color: $nav_bar_color;
         position: fixed;
-        top: 4.5vw;
+        top: 15vw;
         right: 10px;
         margin-right: 0;
         border: 1px solid $background_color;
@@ -632,30 +645,143 @@ form .message {
 
     li {
         margin: 0;
-        font-size: 4vw;
+        font-size: 5.5vw;
     }
 
     .hamburger_icon {
         display: block;
         padding-right: 5vw;
+        font-size: 6vw;
+    }
+
+    header {
+        margin: 1vw;
+    }
+
+    .svg_container {
+        width: 50vw;
+    }
+
+    .welcome_message h1 {
+        margin-bottom: -18px;
+        font-size: 8vw;
+    }
+
+    .welcome_message h2 {
+        font-size: 7vw;
+    }
+
+    .status {
+        font-size: 5vw;
+    }
+
+    .learn {
         font-size: 4.5vw;
+        padding-bottom: 2vw;
+    }
+
+    .intro_text {
+        padding: 0 10px 10px 10px;
+        width: 100%;
+    }
+
+    .intro_text h1 {
+        font-size: 7vw;
+        margin: 0;
     }
 
     .intro_text p {
-        padding: 10px;
-        font-size: 2vw;
+        font-size: 3vw;
+        padding: 0;
+        margin: 0;
     }
+
+    .wrapped_photo {
+        display: flex;
+        align-items: center;
+    }
+
+    .small_photo {
+        display: block;
+        margin: 10px 0 10px 10px;
+        border-radius: 40px;
+        width: 110%;
+        height: 27vw;
+    }
+
+    .large_photo {
+        display: none;
+    }
+
+    .projects_container h1 {
+        margin: 0;
+        font-size: 7vw;
+    }
+
+    .screenshot_container {
+        margin: 15px 10px 10px 10px;
+        height: 35vw;
+    }
+
+    .project_text {
+        padding: 10px;
+    }
+
+    .project_text h2 {
+        font-size: 5vw;
+    }
+
+
+    .project_description p {
+        margin: 0;
+        font-size: 3.5vw;
+    }
+
+    #food_delivered_description p,
+    #penny_lane_description p,
+    #gopher_glory_description p {
+        font-size: 3vw;
+    }
+
+    .more_info a {
+        margin: 0;
+        font-size: 3vw;
+    }
+
+    .project_link {
+        padding: 0 1px 0 1px;
+    }
+
+    .sticky_projects {
+        position: sticky;
+        top: -400px;
+    }
+
+    .contact_container h1 {
+        font-size: 7vw;
+    }
+
+    label {
+        font-size: 4vw;
+    }
+
 
     .contact_container form {
         text-align: left;
         margin: 0 50px 20px 50px;
     }
 
-    
+    input[type=submit] {
+        font-size: 5vw;
+        margin-bottom: 0;
+    }
+    .socials {
+        font-size: 7vw;
+    }
 
-    //.svg_container {
-    //    transform: scale(0.5);
-    //}
+    .copyright_info {
+        font-size: 3vw;
+    }
 
 }
 

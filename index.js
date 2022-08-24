@@ -1,44 +1,21 @@
-//Puts a 10 second delay on the SVG
-function loopSvg() {
-    const svg_images = $(".top_circle_image, .top_left_circle_image, .bottom_left_circle_image, .bottom_circle_image, .top_right_circle_image, .bottom_right_circle_image, .main_circle_image, .bottom_polygon, .top_polygon, .polygon_frame, .polygon_frame_reverse")
-    if (!svg_images.hasClass("rotate_interval")) {
-        svg_images.addClass("rotate_interval")
+$(".hamburger_icon").on("click", function(e) {
+    e.preventDefault()
+    if (!$(".nav_bar_list_container").hasClass("hide")) {
+        $(".nav_bar_list_container").addClass("hide")
     } else {
-        svg_images.removeClass("rotate_interval")
+        $(".nav_bar_list_container").removeClass("hide")
+    }
+})
+
+
+function hamburgerNavMenu() {
+    const hamburgerIcon = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
     }
 }
-setInterval(loopSvg, 10000)
-
-//Fade in greeting
-$(document).ready(function(){
-    $(".fade_on_load").animate({"opacity":"1"}, 3000)
-})
-
-//Back-to-top-button appears upon scrolling
-if ($(".back_to_top").length) {
-    var scrollTrigger = 100, // px
-        backToTop = function () {
-            var scrollTop = $(window).scrollTop()
-            if (scrollTop > scrollTrigger) {
-                $('.back_to_top').addClass('show')
-            } else {
-                $('.back_to_top').removeClass('show')
-            }
-        }
-    backToTop()
-    $(window).on('scroll', function () {
-        backToTop()
-    })
-}
-
-//Adds functionality to Back-to-top-button
-$('.back_to_top').on('click', function(e) {
-    e.preventDefault()
-    $('html,body').animate({
-        scrollTop: 0
-    }, 700)
-})
-
 
 //Nav bar links jump to section
 $('.about_link').on('click', function(e) {
@@ -60,6 +37,22 @@ $('.contact_link').on('click', function(e) {
     $('html,body').animate({
         scrollTop: $(".parallax_scroll_bottom").offset().top
     }, 1100)
+})
+
+//Puts a 10 second delay on the SVG
+function loopSvg() {
+    const svg_images = $(".top_circle_image, .top_left_circle_image, .bottom_left_circle_image, .bottom_circle_image, .top_right_circle_image, .bottom_right_circle_image, .main_circle_image, .bottom_polygon, .top_polygon, .polygon_frame, .polygon_frame_reverse")
+    if (!svg_images.hasClass("rotate_interval")) {
+        svg_images.addClass("rotate_interval")
+    } else {
+        svg_images.removeClass("rotate_interval")
+    }
+}
+setInterval(loopSvg, 10000)
+
+//Fade in greeting
+$(document).ready(function(){
+    $(".fade_on_load").animate({"opacity":"1"}, 3000)
 })
 
 // function parallaxScrolling (target_element, class_to_add) {
@@ -151,5 +144,30 @@ function closeGopherGloryModal(e) {
     })
 }
 closeGopherGloryModal()
+
+//Back-to-top-button appears upon scrolling
+if ($(".back_to_top").length) {
+    var scrollTrigger = 100, // px
+        backToTop = function () {
+            var scrollTop = $(window).scrollTop()
+            if (scrollTop > scrollTrigger) {
+                $('.back_to_top').addClass('show')
+            } else {
+                $('.back_to_top').removeClass('show')
+            }
+        }
+    backToTop()
+    $(window).on('scroll', function () {
+        backToTop()
+    })
+}
+
+//Adds functionality to Back-to-top-button
+$('.back_to_top').on('click', function(e) {
+    e.preventDefault()
+    $('html,body').animate({
+        scrollTop: 0
+    }, 700)
+})
 
 
