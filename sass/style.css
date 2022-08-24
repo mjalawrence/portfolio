@@ -572,6 +572,7 @@ form .message {
     background-color: black; }
 
   .nav_bar_list_container {
+    display: none;
     background-color: #2E6473;
     position: absolute;
     top: 4.5vw;
