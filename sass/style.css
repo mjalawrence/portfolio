@@ -632,8 +632,8 @@ form .message {
     margin: 0; }
 
   .intro_text p {
-    font-size: 3vw;
-    padding: 0;
+    font-size: 4vw;
+    padding-bottom: 20px;
     margin: 0; }
 
   .wrapped_photo {
@@ -642,10 +642,10 @@ form .message {
 
   .small_photo {
     display: block;
-    margin: 10px 0 10px 10px;
+    margin: 10px 0 10px 0;
     border-radius: 40px;
     width: 110%;
-    height: 27vw; }
+    height: 37vw; }
 
   .large_photo {
     display: none; }
