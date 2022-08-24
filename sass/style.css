@@ -642,7 +642,7 @@ form .message {
 
   .small_photo {
     display: block;
-    margin: 10px 0 10px 0;
+    margin: 10px 0 10px 5px;
     border-radius: 40px;
     width: 110%;
     height: 37vw; }
@@ -682,7 +682,7 @@ form .message {
 
   .sticky_projects {
     position: sticky;
-    top: -400px; }
+    top: 0px; }
 
   .contact_container h1 {
     font-size: 7vw; }
