@@ -1,25 +1,23 @@
 @keyframes rotate{
     0%{ transform: rotate(0deg); }
-    40%{ transform: rotate(360deg); }
-    60%{ transform: rotate(360deg); }
-    100%{ transform: rotate(720deg); }
+    100%{ transform: rotate(360deg); }
 }
 
 @mixin rotate_clockwise {
     margin: 100px;
-    animation-duration: 20s;
-    animation-name: rotate;
-    animation-iteration-count: infinite;
+    animation-duration: 10s;
     animation-timing-function: ease-in-out;
 }
 
 @mixin rotate_anticlockwise {
     margin: 100px;
-    animation-duration: 20s;
-    animation-name: rotate;
-    animation-iteration-count: infinite;
+    animation-duration: 10s;
     animation-direction: reverse;
     animation-timing-function: ease-in-out;
+}
+
+.rotate_interval {
+    animation-name: rotate;
 }
 
 .top_circle_image {

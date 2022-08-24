@@ -1,15 +1,21 @@
-// $(document).ready(function loopSvg() {
-//     $("svg").beginElement()
-// setInterval(loopSvg, 20)
-// })
+//Puts a 10 second delay on the SVG
+function loopSvg() {
+    const svg_images = $(".top_circle_image, .top_left_circle_image, .bottom_left_circle_image, .bottom_circle_image, .top_right_circle_image, .bottom_right_circle_image, .main_circle_image, .bottom_polygon, .top_polygon, .polygon_frame, .polygon_frame_reverse")
+    if (!svg_images.hasClass("rotate_interval")) {
+        svg_images.addClass("rotate_interval")
+    } else {
+        svg_images.removeClass("rotate_interval")
+    }
+}
+setInterval(loopSvg, 10000)
 
 //Fade in greeting
 $(document).ready(function(){
-    $(".fade_on_load").animate({'opacity':'1'}, 3000)
+    $(".fade_on_load").animate({"opacity":"1"}, 3000)
 })
 
-//Back button appears upon scrolling
-if ($('.back_to_top').length) {
+//Back-to-top-button appears upon scrolling
+if ($(".back_to_top").length) {
     var scrollTrigger = 100, // px
         backToTop = function () {
             var scrollTop = $(window).scrollTop()
@@ -25,8 +31,7 @@ if ($('.back_to_top').length) {
     })
 }
 
-
-//Back to top button
+//Adds functionality to Back-to-top-button
 $('.back_to_top').on('click', function(e) {
     e.preventDefault()
     $('html,body').animate({
@@ -57,6 +62,11 @@ $('.contact_link').on('click', function(e) {
     }, 1100)
 })
 
+// function parallaxScrolling (target_element, class_to_add) {
+//     //
+// }
+//
+// parallaxScrolling()
 
 //Parallax scrolling
 $(window).scroll(function () {
