@@ -488,6 +488,7 @@ label {
 
 input[type=text] {
   font-size: 2vw;
+  font-family: "Jaldi";
   display: block;
   border: #FFF solid 1px;
   border-radius: 5px;
@@ -496,6 +497,7 @@ input[type=text] {
 
 form .message {
   font-size: 2vw;
+  font-family: "Jaldi";
   display: block;
   border: #FFF solid 1px;
   border-radius: 5px;
@@ -702,6 +704,9 @@ input[type=submit]:hover {
   .contact_container form {
     text-align: left;
     margin: 0 50px 20px 50px; }
+
+  input[type=text] {
+    font-size: 4vw; }
 
   input[type=submit] {
     font-size: 5vw;
