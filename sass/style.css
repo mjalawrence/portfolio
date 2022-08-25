@@ -322,7 +322,7 @@ svg {
 #food_delivered_description p {
   opacity: 1;
   margin: 0;
-  padding: 0 10px 0 20px; }
+  padding: 0 10px 10px 20px; }
 
 .full_desc {
   display: none; }
@@ -352,7 +352,10 @@ svg {
 
 .project_text {
   width: 65%;
-  padding: 20px; }
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
 
 .project_text h2 {
   font-size: 3.5vw;
@@ -509,8 +512,7 @@ input[type=submit] {
   border: #CA9F4B solid 1px;
   margin: 0 auto;
   display: block;
-  cursor: pointer;
-  margin-bottom: 30px; }
+  cursor: pointer; }
 
 input[type=submit]:hover {
   border: #FFF solid 1px;

@@ -22,15 +22,49 @@ $footer_color: #35395E;
     justify-content: space-between;
 }
 
+@mixin flex_center {
+    display: flex;
+    align-items: center;
+}
+
 @mixin image_container {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-@mixin flex_center {
-    display: flex;
-    align-items: center;
+//modal Mixins
+@mixin close_button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@mixin description_modal {
+    position: absolute;
+    margin: 10px;
+    border: solid 1px $background_color;
+    border-radius: 10px;
+    background-color: #385228;
+    opacity: 0.95;
+    font-size: 2.1vw;
+    z-index: 199;
+    padding: 10px;
+}
+
+@mixin description_header {
+    text-align: center;
+    margin: 0;
+    opacity: 1;
+}
+
+@mixin description_text {
+    opacity: 1;
+    margin: 0;
+    padding: 0 10px 10px 20px;
 }
 
 //-------------------------------------------------
@@ -294,27 +328,15 @@ svg {
 }
 
 #food_delivered_description {
-    position: absolute;
-    margin: 10px;
-    border: solid 1px $background_color;
-    border-radius: 10px;
-    background-color: #385228;
-    opacity: 0.95;
-    font-size: 2.1vw;
-    z-index: 199;
-    padding: 10px;
+    @include description_modal;
 }
 
 #food_delivered_description h2 {
-    text-align: center;
-    margin: 0;
-    opacity: 1;
+    @include description_header;
 }
 
 #food_delivered_description p {
-    opacity: 1;
-    margin: 0;
-    padding: 0 10px 0 20px;
+    @include description_text;
 }
 
 .full_desc {
@@ -326,12 +348,7 @@ svg {
 }
 
 #close_food_delivered_desc_button {
-    position: absolute;
-    right: 0;
-    top: 0;
-    border-radius: 5px;
-    text-decoration: none;
-    cursor: pointer;
+    @include close_button;
 }
 
 .description_stripe {
@@ -349,6 +366,9 @@ svg {
 .project_text {
     width: 65%;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .project_text h2 {
@@ -403,36 +423,19 @@ svg {
 }
 
 #penny_lane_description {
-    position: absolute;
-    margin: 10px;
-    border: solid 1px $background_color;
-    border-radius: 10px;
-    background-color: #385228;
-    opacity: 0.95;
-    font-size: 2.1vw;
-    z-index: 199;
-    padding: 10px;
+    @include description_modal;
 }
 
 #penny_lane_description h2 {
-    text-align: center;
-    margin: 0;
-    opacity: 1;
+    @include description_header;
 }
 
 #penny_lane_description p {
-    opacity: 1;
-    margin: 0;
-    padding: 0 10px 10px 20px;
+    @include description_text;
 }
 
 #close_penny_desc_button {
-    position: absolute;
-    right: 0;
-    top: 0;
-    border-radius: 5px;
-    text-decoration: none;
-    cursor: pointer;
+    @include close_button;
 }
 
 #gopher_glory_container {
@@ -440,36 +443,19 @@ svg {
 }
 
 #gopher_glory_description {
-    position: absolute;
-    margin: 10px;
-    border: solid 1px $background_color;
-    border-radius: 10px;
-    background-color: #385228;
-    opacity: 0.95;
-    font-size: 2.1vw;
-    z-index: 199;
-    padding: 10px;
+    @include description_modal;
 }
 
 #gopher_glory_description h2 {
-    text-align: center;
-    margin: 0;
-    opacity: 1;
+    @include description_header;
 }
 
 #gopher_glory_description p {
-    opacity: 1;
-    margin: 0;
-    padding: 0 10px 10px 20px;
+    @include description_text;
 }
 
 #close_gopher_desc_button {
-    position: absolute;
-    right: 0;
-    top: 0;
-    border-radius: 5px;
-    text-decoration: none;
-    cursor: pointer;
+    @include close_button;
 }
 
 .contact_padding {
@@ -530,7 +516,6 @@ input[type=submit] {
     margin: 0 auto;
     display: block;
     cursor: pointer;
-    margin-bottom: 30px;
 }
 
 input[type=submit]:hover {
