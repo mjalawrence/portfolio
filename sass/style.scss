@@ -32,19 +32,10 @@ $footer_color: #35395E;
     align-items: center;
 }
 
-
 //-------------------------------------------------
 
 * {
     box-sizing: border-box;
-}
-
-html {
-    position: fixed;
-}
-
-html, body {
-    overflow-x: hidden;
 }
 
 body {
@@ -52,9 +43,13 @@ body {
     font-family: $main_font;
     background-color: $background_color;
     color: $main_font_color;
+    position: relative;
+    overflow-x: hidden;
 }
 
-.sticky {
+
+//parallax sticky classes added with jquery
+.sticky_about {
     position: sticky;
     top: -10px;
 }
@@ -64,7 +59,7 @@ body {
     top: -550px;
 }
 
-.bottom_sticky {
+.sticky_bottom {
     z-index: 400;
     position: sticky;
     top: 0px;
@@ -91,7 +86,6 @@ body {
     border: $nav_bar_color solid 1px;
     border-radius: 5px;
 }
-
 
 .about_link:hover {
     border: $main_font_color solid 1px;
@@ -623,7 +617,7 @@ form .message {
 
 @media (max-width: 950px) {
 
-    .sticky {
+    .sticky_about {
         position: sticky;
         top: -200px;
     }
@@ -633,7 +627,7 @@ form .message {
         top: -600px;
     }
 
-    .bottom_sticky {
+    .sticky_bottom {
         z-index: 400;
         position: sticky;
         top: -100px;
@@ -810,7 +804,7 @@ form .message {
 }
 
 @media (max-width: 700px) {
-    .sticky {
+    .sticky_about {
         position: sticky;
         top: 0;
     }
@@ -820,7 +814,7 @@ form .message {
         top: 0px;
     }
 
-    .bottom_sticky {
+    .sticky_bottom {
         z-index: 400;
         position: sticky;
         top: -100px;

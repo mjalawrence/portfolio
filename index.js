@@ -1,166 +1,113 @@
 // Hamburger menu open and close
 $(".hamburger_icon").on("click", function(e) {
     e.preventDefault()
-    if (!$(".nav_bar_list_container").hasClass("hide")) {
-        $(".nav_bar_list_container").addClass("hide")
+    const navBarListContainer =  $(".nav_bar_list_container")
+    if (!navBarListContainer.hasClass("hide")) {
+        navBarListContainer.addClass("hide")
     } else {
-        $(".nav_bar_list_container").removeClass("hide")
+        navBarListContainer.removeClass("hide")
     }
 })
 
-//Nav bar links jump to section
-$('.about_link').on('click', function(e) {
-    e.preventDefault()
-    $('html,body').animate({
-        scrollTop: $(".parallax_scroll_about").offset().top
-    }, 700)
-})
 
-$('.projects_link').on('click', function(e) {
-    e.preventDefault()
-    $('html,body').animate({
-        scrollTop: $(".parallax_scroll_projects").offset().top
-    }, 900)
-})
+//Nav bar links scroll smoothly to section
+function functionalNavBarLinks (link, parallax, time) {
+    $(link).on("click", function(e) {
+        e.preventDefault()
+        $("html, body").animate({
+            scrollTop: $(parallax).offset().top
+        }, time)
+    })
+}
 
-$('.contact_link').on('click', function(e) {
-    e.preventDefault()
-    $('html,body').animate({
-        scrollTop: $(".parallax_scroll_bottom").offset().top
-    }, 1100)
-})
+functionalNavBarLinks(".about_link", ".parallax_scroll_about", 700)
+functionalNavBarLinks(".projects_link", ".parallax_scroll_projects", 900)
+functionalNavBarLinks(".contact_link", ".parallax_scroll_bottom", 1500)
+
 
 //Puts a 10 second delay on the SVG
 function loopSvg() {
-    const svg_images = $(".top_circle_image, .top_left_circle_image, .bottom_left_circle_image, .bottom_circle_image, .top_right_circle_image, .bottom_right_circle_image, .main_circle_image, .bottom_polygon, .top_polygon, .polygon_frame, .polygon_frame_reverse")
-    if (!svg_images.hasClass("rotate_interval")) {
-        svg_images.addClass("rotate_interval")
+    const svgImages = $(".top_circle_image, .top_left_circle_image, .bottom_left_circle_image, .bottom_circle_image, .top_right_circle_image, .bottom_right_circle_image, .main_circle_image, .bottom_polygon, .top_polygon, .polygon_frame, .polygon_frame_reverse")
+    if (!svgImages.hasClass("rotate_interval")) {
+        svgImages.addClass("rotate_interval")
     } else {
-        svg_images.removeClass("rotate_interval")
+        svgImages.removeClass("rotate_interval")
     }
 }
 setInterval(loopSvg, 10000)
 
+
 //Fade in greeting
-$(document).ready(function(){
-    $(".fade_on_load").animate({"opacity":"1"}, 3000)
-})
-
-// function parallaxScrolling (target_element, class_to_add) {
-//     //
-// }
-//
-// parallaxScrolling()
-
-
-
+$(".fade_on_load").animate({"opacity":"1"}, 3000)
 
 
 //Parallax scrolling
-$(window).scroll(function () {
-        let bottom_of_element = $(".parallax_scroll_about").offset().top + $(".parallax_scroll_about").outerHeight()
-        let bottom_of_window = $(window).scrollTop() + $(window).height()
-        if ((bottom_of_window) > bottom_of_element) {
-            $(".parallax_scroll_about").addClass('sticky')
+function parallaxScrolling(element, sticky) {
+    $(window).scroll(function() {
+        let bottomOfElement = $(element).offset().top + $(element).outerHeight()
+        let bottomOfWindow = $(window).scrollTop() + $(window).height()
+        if(bottomOfWindow > bottomOfElement) {
+            $(element).addClass(sticky)
         }
     })
+}
 
-$(window).scroll(function () {
-    let bottom_of_element = $(".parallax_scroll_projects").offset().top + $(".parallax_scroll_projects").outerHeight()
-    let bottom_of_window = $(window).scrollTop() + $(window).height()
-    if ((bottom_of_window) > bottom_of_element) {
-        $(".parallax_scroll_projects").addClass('sticky_projects')
-    }
-})
+parallaxScrolling(".parallax_scroll_about", "sticky_about")
+parallaxScrolling(".parallax_scroll_projects", "sticky_projects")
+parallaxScrolling(".parallax_scroll_bottom", "sticky_bottom")
 
-$(window).scroll(function () {
-    let bottom_of_element = $(".parallax_scroll_bottom").offset().top + $(".parallax_scroll_bottom").outerHeight()
-    let bottom_of_window = $(window).scrollTop() + $(window).height()
-    if ((bottom_of_window) > bottom_of_element) {
-        $(".parallax_scroll_bottom").addClass('bottom_sticky')
-    }
-})
 
-////MODALS
-//Food Delivered Modal
-function readMoreFoodDeliveredModal(e) {
-    const readMoreButton = document.getElementById("food_delivered")
-    const fullDescription = document.getElementById("food_delivered_description")
-    readMoreButton.addEventListener('click', e => {
-        fullDescription.style.display= "block"
+////DESCRIPTION MODAL
+//Open Modal
+function openDescriptionModal(readMore, description) {
+    const readMoreButton = document.getElementById(readMore)
+    const fullDescription = document.getElementById(description)
+    readMoreButton.addEventListener("click", e => {
+        fullDescription.style.display = "block"
     })
 }
-readMoreFoodDeliveredModal()
 
-function closeFoodDeliveredModal(e) {
-    const closeButton = document.getElementById("close_food_delivered_desc_button")
-    const fullDescription = document.getElementById("food_delivered_description")
-    closeButton.addEventListener('click', e => {
-        fullDescription.style.display= "none"
+openDescriptionModal("food_delivered", "food_delivered_description")
+openDescriptionModal("penny_lane", "penny_lane_description")
+openDescriptionModal("gopher_glory", "gopher_glory_description")
+
+//Close Modal
+function closeDescriptionModal(closeButton, description) {
+    const closeModalButton = document.getElementById(closeButton)
+    const fullDescription = document.getElementById(description)
+    closeModalButton.addEventListener("click", e => {
+        fullDescription.style.display = "none"
     })
 }
-closeFoodDeliveredModal()
+
+closeDescriptionModal("close_food_delivered_desc_button", "food_delivered_description")
+closeDescriptionModal("close_penny_desc_button", "penny_lane_description")
+closeDescriptionModal("close_gopher_desc_button", "gopher_glory_description")
 
 
-//Penny Lane Modal
-function readMorePennyLaneModal(e) {
-    const readMoreButton = document.getElementById("penny_lane")
-    const fullDescription = document.getElementById("penny_lane_description")
-    readMoreButton.addEventListener('click', e => {
-        fullDescription.style.display= "block"
-    })
-}
-readMorePennyLaneModal()
-
-function closePennyLaneModal(e) {
-    const closeButton = document.getElementById("close_penny_desc_button")
-    const fullDescription = document.getElementById("penny_lane_description")
-    closeButton.addEventListener('click', e => {
-        fullDescription.style.display= "none"
-    })
-}
-closePennyLaneModal()
-
-//Gopher Glory Modal
-function readMoreGopherGloryModal(e) {
-    const readMoreButton = document.getElementById("gopher_glory")
-    const fullDescription = document.getElementById("gopher_glory_description")
-    readMoreButton.addEventListener('click', e => {
-        fullDescription.style.display= "block"
-    })
-}
-readMoreGopherGloryModal()
-
-function closeGopherGloryModal(e) {
-    const closeButton = document.getElementById("close_gopher_desc_button")
-    const fullDescription = document.getElementById("gopher_glory_description")
-    closeButton.addEventListener('click', e => {
-        fullDescription.style.display= "none"
-    })
-}
-closeGopherGloryModal()
-
+////BACK-TO-TOP BUTTON
 //Back-to-top-button appears upon scrolling
-if ($(".back_to_top").length) {
-    var scrollTrigger = 100, // px
+const backToTopButton = $(".back_to_top")
+if (backToTopButton.length) {
+    let scrollTrigger = 100, // px
         backToTop = function () {
-            var scrollTop = $(window).scrollTop()
+            let scrollTop = $(window).scrollTop()
             if (scrollTop > scrollTrigger) {
-                $('.back_to_top').addClass('show')
+                backToTopButton.addClass("show")
             } else {
-                $('.back_to_top').removeClass('show')
+                backToTopButton.removeClass("show")
             }
         }
     backToTop()
-    $(window).on('scroll', function () {
+    $(window).on("scroll", function () {
         backToTop()
     })
 }
 
 //Adds functionality to Back-to-top-button
-$('.back_to_top').on('click', function(e) {
+backToTopButton.on("click", function(e) {
     e.preventDefault()
-    $('html,body').animate({
+    $("html, body").animate({
         scrollTop: 0
     }, 700)
 })

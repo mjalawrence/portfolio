@@ -80,19 +80,15 @@
 * {
   box-sizing: border-box; }
 
-html {
-  position: fixed; }
-
-html, body {
-  overflow-x: hidden; }
-
 body {
   margin: 0 auto;
   font-family: "Jaldi";
   background-color: #f7f1c3;
-  color: #f7f1c3; }
+  color: #f7f1c3;
+  position: relative;
+  overflow-x: hidden; }
 
-.sticky {
+.sticky_about {
   position: sticky;
   top: -10px; }
 
@@ -100,7 +96,7 @@ body {
   position: sticky;
   top: -550px; }
 
-.bottom_sticky {
+.sticky_bottom {
   z-index: 400;
   position: sticky;
   top: 0px;
@@ -576,7 +572,7 @@ form .message {
   opacity: 1; }
 
 @media (max-width: 950px) {
-  .sticky {
+  .sticky_about {
     position: sticky;
     top: -200px; }
 
@@ -584,7 +580,7 @@ form .message {
     position: sticky;
     top: -600px; }
 
-  .bottom_sticky {
+  .sticky_bottom {
     z-index: 400;
     position: sticky;
     top: -100px; }
@@ -722,7 +718,7 @@ form .message {
   .copyright_info {
     font-size: 3vw; } }
 @media (max-width: 700px) {
-  .sticky {
+  .sticky_about {
     position: sticky;
     top: 0; }
 
@@ -730,7 +726,7 @@ form .message {
     position: sticky;
     top: 0px; }
 
-  .bottom_sticky {
+  .sticky_bottom {
     z-index: 400;
     position: sticky;
     top: -100px; }
