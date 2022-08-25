@@ -582,11 +582,6 @@ input[type=submit]:hover {
     opacity: 0;
 }
 
-.back_to_top:hover {
-    background-color: $background_color;
-    color: crimson;
-}
-
 .show {
     opacity: 1;
 }
@@ -833,6 +828,12 @@ input[type=submit]:hover {
     }
 }
 
+@media(hover: hover) and (pointer: fine) {
+    .back_to_top:hover {
+        background-color: $background_color;
+        color: crimson;
+    }
+}
 
 
 

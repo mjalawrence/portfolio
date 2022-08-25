@@ -569,10 +569,6 @@ input[type=submit]:hover {
   margin-left: 10px;
   opacity: 0; }
 
-.back_to_top:hover {
-  background-color: #f7f1c3;
-  color: crimson; }
-
 .show {
   opacity: 1; }
 
@@ -764,5 +760,9 @@ input[type=submit]:hover {
   .small_photo {
     width: 150%;
     height: 37vw; } }
+@media (hover: hover) and (pointer: fine) {
+  .back_to_top:hover {
+    background-color: #f7f1c3;
+    color: crimson; } }
 
 /*# sourceMappingURL=style.css.map */
