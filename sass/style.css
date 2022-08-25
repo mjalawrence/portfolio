@@ -554,7 +554,7 @@ input[type=submit]:hover {
   position: sticky;
   z-index: 500;
   bottom: 10px;
-  left: 10000px;
+  left: 100vw;
   width: 100px;
   text-align: center;
   padding: 2px;
