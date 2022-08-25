@@ -99,29 +99,13 @@ body {
 .sticky_bottom {
   z-index: 400;
   position: sticky;
-  top: 0px;
+  top: 0;
   background-color: #f7f1c3; }
 
 .top_container {
   position: sticky;
   top: 0;
   z-index: 1; }
-
-#top {
-  position: relative; }
-
-.michael {
-  font-size: 3vw;
-  margin-left: 10vw; }
-
-.michael h2 {
-  margin: 0;
-  border: #2E6473 solid 1px;
-  border-radius: 5px; }
-
-.about_link:hover {
-  border: #f7f1c3 solid 1px;
-  border-radius: 5px; }
 
 nav {
   background-color: #2E6473;
@@ -135,6 +119,15 @@ nav {
   border-left: 0;
   padding: 0; }
 
+.michael {
+  font-size: 3vw;
+  margin-left: 10vw; }
+
+.michael h2 {
+  margin: 0;
+  border: #2E6473 solid 1px;
+  border-radius: 5px; }
+
 .nav_bar_list_container {
   display: flex;
   align-items: center;
@@ -143,6 +136,9 @@ nav {
 .nav_list {
   display: flex;
   list-style-type: none; }
+
+ul {
+  margin: 0; }
 
 a {
   text-decoration: none;
@@ -157,9 +153,6 @@ ul a:hover {
   border: #f7f1c3 solid 1px;
   border-radius: 5px;
   padding: 0 5px 0 5px; }
-
-ul {
-  margin: 0; }
 
 li {
   margin: 0 30px;
@@ -189,6 +182,11 @@ svg {
   flex-direction: column;
   color: #2E6473; }
 
+.stripe_padding {
+  border-radius: 10px;
+  padding: 20px 0 20px 0;
+  width: 100%; }
+
 .greeting_stripe {
   display: flex;
   justify-content: space-between;
@@ -196,11 +194,6 @@ svg {
   border-right: 0;
   border-left: 0;
   padding: 0; }
-
-.stripe_padding {
-  border-radius: 10px;
-  padding: 20px 0 20px 0;
-  width: 100%; }
 
 .welcome_message {
   width: 100%;
@@ -299,13 +292,54 @@ svg {
 
 .projects_stripe {
   background-color: #628D48;
-  border-top: solid white 1px;
+  border-top: solid #f7f1c3 1px;
   border-right: 0;
   border-left: 0; }
+
+#food_delivered_container {
+  position: relative; }
 
 .project_container {
   display: flex;
   justify-content: space-between; }
+
+#food_delivered_description {
+  position: absolute;
+  margin: 10px;
+  border: solid 1px #f7f1c3;
+  border-radius: 10px;
+  background-color: #385228;
+  opacity: 0.95;
+  font-size: 2.1vw;
+  z-index: 199;
+  padding: 10px; }
+
+#food_delivered_description h2 {
+  text-align: center;
+  margin: 0;
+  opacity: 1; }
+
+#food_delivered_description p {
+  opacity: 1;
+  margin: 0;
+  padding: 0 10px 0 20px; }
+
+.full_desc {
+  display: none; }
+
+.description_header {
+  position: relative; }
+
+#close_food_delivered_desc_button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer; }
+
+.description_stripe {
+  border-top: solid 1px #f7f1c3; }
 
 .screenshot_container {
   border-radius: 10px;
@@ -359,68 +393,19 @@ svg {
 .project_link .fa-brands {
   color: #f7f1c3; }
 
-.full_desc {
-  display: none; }
-
-.description_header {
-  position: relative; }
-
-.description_stripe {
-  border-top: solid 1px #f7f1c3; }
-
-#food_delivered_container {
-  position: relative; }
-
-#food_delivered_description {
-  position: absolute;
-  margin: 10px;
-  border: solid 1px white;
-  border-radius: 10px;
-  background-color: #385228;
-  opacity: 0.95;
-  font-size: 2.1vw;
-  z-index: 199;
-  padding: 10px; }
-
-#close_food_delivered_desc_button {
-  position: absolute;
-  right: 0%;
-  top: 0%;
-  border-radius: 5px;
-  text-decoration: none;
-  cursor: pointer; }
-
-#food_delivered_description h2 {
-  text-align: center;
-  margin: 0;
-  opacity: 1; }
-
-#food_delivered_description p {
-  opacity: 1;
-  margin: 0;
-  padding: 0px 10px 0px 20px; }
-
 #penny_lane_container {
   position: relative; }
 
 #penny_lane_description {
   position: absolute;
   margin: 10px;
-  border: solid 1px white;
+  border: solid 1px #f7f1c3;
   border-radius: 10px;
   background-color: #385228;
   opacity: 0.95;
   font-size: 2.1vw;
   z-index: 199;
   padding: 10px; }
-
-#close_penny_desc_button {
-  position: absolute;
-  right: 0%;
-  top: 0%;
-  border-radius: 5px;
-  text-decoration: none;
-  cursor: pointer; }
 
 #penny_lane_description h2 {
   text-align: center;
@@ -430,7 +415,15 @@ svg {
 #penny_lane_description p {
   opacity: 1;
   margin: 0;
-  padding: 0px 10px 10px 20px; }
+  padding: 0 10px 10px 20px; }
+
+#close_penny_desc_button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer; }
 
 #gopher_glory_container {
   position: relative; }
@@ -438,21 +431,13 @@ svg {
 #gopher_glory_description {
   position: absolute;
   margin: 10px;
-  border: solid 1px white;
+  border: solid 1px #f7f1c3;
   border-radius: 10px;
   background-color: #385228;
   opacity: 0.95;
   font-size: 2.1vw;
   z-index: 199;
   padding: 10px; }
-
-#close_gopher_desc_button {
-  position: absolute;
-  right: 0%;
-  top: 0%;
-  border-radius: 5px;
-  text-decoration: none;
-  cursor: pointer; }
 
 #gopher_glory_description h2 {
   text-align: center;
@@ -462,7 +447,15 @@ svg {
 #gopher_glory_description p {
   opacity: 1;
   margin: 0;
-  padding: 0px 10px 10px 20px; }
+  padding: 0 10px 10px 20px; }
+
+#close_gopher_desc_button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer; }
 
 .contact_padding {
   padding-top: 20px;
@@ -477,15 +470,15 @@ svg {
   border-left: 0;
   text-align: center; }
 
-.contact_container form {
-  text-align: left;
-  margin: 0 150px 20px 150px; }
-
 .contact_container h1 {
   font-size: 5vw;
   margin-top: 20px;
-  margin-bottom: 0px;
+  margin-bottom: 0;
   display: inline; }
+
+.contact_container form {
+  text-align: left;
+  margin: 0 150px 20px 150px; }
 
 label {
   font-size: 2vw; }
@@ -493,14 +486,23 @@ label {
 input[type=text] {
   font-size: 2vw;
   display: block;
-  border: white solid 1px;
+  border: #FFF solid 1px;
   border-radius: 5px;
   width: 100%;
   margin-bottom: 10px; }
 
+form .message {
+  font-size: 2vw;
+  display: block;
+  border: #FFF solid 1px;
+  border-radius: 5px;
+  width: 100%;
+  height: 100px;
+  margin-bottom: 20px; }
+
 input[type=submit] {
   font-size: 3vw;
-  color: white;
+  color: #FFF;
   background-color: transparent;
   font-family: "Jaldi";
   width: 150px;
@@ -511,24 +513,8 @@ input[type=submit] {
   margin-bottom: 30px; }
 
 input[type=submit]:hover {
-  border: white solid 1px;
+  border: #FFF solid 1px;
   border-radius: 5px; }
-
-form .message {
-  font-size: 2vw;
-  display: block;
-  border: white solid 1px;
-  border-radius: 5px;
-  width: 100%;
-  height: 100px;
-  margin-bottom: 20px; }
-
-.copyright_info {
-  color: #35395E;
-  font-size: 1.5vw;
-  display: block;
-  text-align: center;
-  padding-bottom: 15px; }
 
 .socials {
   display: block;
@@ -547,6 +533,13 @@ form .message {
 .socials_link:hover {
   border: solid #35395E 1px;
   border-radius: 5px; }
+
+.copyright_info {
+  color: #35395E;
+  font-size: 1.5vw;
+  display: block;
+  text-align: center;
+  padding-bottom: 15px; }
 
 .copyright_info a {
   color: #35395E; }
@@ -712,6 +705,9 @@ form .message {
     font-size: 5vw;
     margin-bottom: 0; }
 
+  form .message {
+    font-size: 4vw; }
+
   .socials {
     font-size: 7vw; }
 
@@ -724,7 +720,7 @@ form .message {
 
   .sticky_projects {
     position: sticky;
-    top: 0px; }
+    top: 0; }
 
   .sticky_bottom {
     z-index: 400;
