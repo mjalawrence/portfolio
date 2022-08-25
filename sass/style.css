@@ -560,13 +560,13 @@ input[type=submit]:hover {
 .back_to_top {
   border-radius: 5px;
   background-color: crimson;
-  position: sticky;
+  position: fixed;
   z-index: 500;
   bottom: 10px;
   width: 100px;
+  right: 10px;
   text-align: center;
   padding: 2px;
-  margin-left: 10px;
   opacity: 0; }
 
 .show {
