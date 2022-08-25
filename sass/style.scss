@@ -789,7 +789,8 @@ input[type=submit]:hover {
         margin: 0 50px 20px 50px;
     }
 
-    input[type=text] {
+    input[type=text],
+    input[type=email] {
         font-size: 4vw;
     }
 
