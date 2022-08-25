@@ -497,6 +497,16 @@ input[type=text] {
     margin-bottom: 10px;
 }
 
+input[type=email] {
+    font-size: 2vw;
+    font-family: $main_font;
+    display: block;
+    border: $contact_font_color solid 1px;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
 form .message {
     font-size: 2vw;
     font-family: $main_font;
@@ -580,6 +590,30 @@ input[type=submit]:hover {
 
 .show {
     opacity: 1;
+}
+
+// thank you page
+
+.contact_container p {
+    font-size: 4vw;
+    margin: 0 0 10px 0;
+}
+
+.back_to_portfolio{
+    padding: 10px;
+}
+
+.contact_container a {
+    font-size: 3vw;
+    border-radius: 5px;
+    background-color: crimson;
+    margin: 10px;
+    padding: 0 10px 0 10px;
+}
+
+.contact_container a:hover {
+    background-color: #f7f1c3;
+    color: crimson;
 }
 
 //-----------------------media queries
