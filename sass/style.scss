@@ -155,11 +155,7 @@ ul a {
     padding: 0 5px 0 5px;
 }
 
-ul a:hover {
-    border: $main_font_color solid 1px;
-    border-radius: 5px;
-    padding: 0 5px 0 5px;
-}
+
 
 li {
     margin: 0 30px;
@@ -245,11 +241,7 @@ svg {
     padding: 0 5px 0 5px;
 }
 
-.learn a:hover {
-    border: $greeting_font_color solid 1px;
-    border-radius: 5px;
-    padding: 0 5px 0 5px;
-}
+
 
 .about_container {
     position: sticky;
@@ -390,10 +382,6 @@ svg {
     border: solid 1px $project_color;
 }
 
-.more_info a:hover {
-    border: solid 1px $main_font_color;
-}
-
 .read_more {
     font-size: 2.5vw;
     color: $main_font_color;
@@ -530,11 +518,6 @@ input[type=submit] {
     cursor: pointer;
 }
 
-input[type=submit]:hover {
-    border: $contact_font_color solid 1px;
-    border-radius: 5px;
-}
-
 .socials {
     display: block;
     text-align: center;
@@ -550,11 +533,6 @@ input[type=submit]:hover {
 
 .socials_link {
     border: solid $background_color 1px;
-}
-
-.socials_link:hover {
-    border: solid $footer_color 1px;
-    border-radius: 5px;
 }
 
 .copyright_info {
@@ -602,11 +580,6 @@ input[type=submit]:hover {
     background-color: crimson;
     margin: 10px;
     padding: 0 10px 0 10px;
-}
-
-.contact_container a:hover {
-    background-color: #f7f1c3;
-    color: crimson;
 }
 
 //-----------------------media queries
@@ -829,8 +802,39 @@ input[type=submit]:hover {
 }
 
 @media(hover: hover) and (pointer: fine) {
+    ul a:hover {
+        border: $main_font_color solid 1px;
+        border-radius: 5px;
+        padding: 0 5px 0 5px;
+    }
+
+    .learn a:hover {
+        border: $greeting_font_color solid 1px;
+        border-radius: 5px;
+        padding: 0 5px 0 5px;
+    }
+
+    .more_info a:hover {
+        border: solid 1px $main_font_color;
+    }
+
+    input[type=submit]:hover {
+        border: $contact_font_color solid 1px;
+        border-radius: 5px;
+    }
+
     .back_to_top:hover {
         background-color: $background_color;
+        color: crimson;
+    }
+
+    .socials_link:hover {
+        border: solid $footer_color 1px;
+        border-radius: 5px;
+    }
+
+    .contact_container a:hover {
+        background-color: #f7f1c3;
         color: crimson;
     }
 }

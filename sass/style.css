@@ -149,11 +149,6 @@ ul a {
   border: #2E6473 solid 1px;
   padding: 0 5px 0 5px; }
 
-ul a:hover {
-  border: #f7f1c3 solid 1px;
-  border-radius: 5px;
-  padding: 0 5px 0 5px; }
-
 li {
   margin: 0 30px;
   font-size: 2.3vw;
@@ -225,11 +220,6 @@ svg {
 .learn a {
   color: #2E6473;
   border: #f7f1c3 solid 1px;
-  padding: 0 5px 0 5px; }
-
-.learn a:hover {
-  border: #2E6473 solid 1px;
-  border-radius: 5px;
   padding: 0 5px 0 5px; }
 
 .about_container {
@@ -372,9 +362,6 @@ svg {
 
 .more_info a {
   border: solid 1px #628D48; }
-
-.more_info a:hover {
-  border: solid 1px #f7f1c3; }
 
 .read_more {
   font-size: 2.5vw;
@@ -525,10 +512,6 @@ input[type=submit] {
   display: block;
   cursor: pointer; }
 
-input[type=submit]:hover {
-  border: #FFF solid 1px;
-  border-radius: 5px; }
-
 .socials {
   display: block;
   text-align: center;
@@ -542,10 +525,6 @@ input[type=submit]:hover {
 
 .socials_link {
   border: solid #f7f1c3 1px; }
-
-.socials_link:hover {
-  border: solid #35395E 1px;
-  border-radius: 5px; }
 
 .copyright_info {
   color: #35395E;
@@ -585,10 +564,6 @@ input[type=submit]:hover {
   background-color: crimson;
   margin: 10px;
   padding: 0 10px 0 10px; }
-
-.contact_container a:hover {
-  background-color: #f7f1c3;
-  color: crimson; }
 
 @media (max-width: 950px) {
   .sticky_about {
@@ -761,7 +736,32 @@ input[type=submit]:hover {
     width: 150%;
     height: 37vw; } }
 @media (hover: hover) and (pointer: fine) {
+  ul a:hover {
+    border: #f7f1c3 solid 1px;
+    border-radius: 5px;
+    padding: 0 5px 0 5px; }
+
+  .learn a:hover {
+    border: #2E6473 solid 1px;
+    border-radius: 5px;
+    padding: 0 5px 0 5px; }
+
+  .more_info a:hover {
+    border: solid 1px #f7f1c3; }
+
+  input[type=submit]:hover {
+    border: #FFF solid 1px;
+    border-radius: 5px; }
+
   .back_to_top:hover {
+    background-color: #f7f1c3;
+    color: crimson; }
+
+  .socials_link:hover {
+    border: solid #35395E 1px;
+    border-radius: 5px; }
+
+  .contact_container a:hover {
     background-color: #f7f1c3;
     color: crimson; } }
 
