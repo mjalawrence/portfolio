@@ -1,3 +1,4 @@
+// Hamburger menu open and close
 $(".hamburger_icon").on("click", function(e) {
     e.preventDefault()
     if (!$(".nav_bar_list_container").hasClass("hide")) {
@@ -6,16 +7,6 @@ $(".hamburger_icon").on("click", function(e) {
         $(".nav_bar_list_container").removeClass("hide")
     }
 })
-
-
-function hamburgerNavMenu() {
-    const hamburgerIcon = document.getElementById("myLinks");
-    if (x.style.display === "block") {
-        x.style.display = "none";
-    } else {
-        x.style.display = "block";
-    }
-}
 
 //Nav bar links jump to section
 $('.about_link').on('click', function(e) {

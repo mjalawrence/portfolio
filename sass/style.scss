@@ -39,6 +39,14 @@ $footer_color: #35395E;
     box-sizing: border-box;
 }
 
+html {
+    position: fixed;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
 body {
     margin:0 auto;
     font-family: $main_font;
