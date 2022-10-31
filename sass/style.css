@@ -94,7 +94,7 @@ body {
 
 .sticky_projects {
   position: sticky;
-  top: -700px; }
+  top: -1000px; }
 
 .sticky_bottom {
   z-index: 400;
@@ -461,6 +461,38 @@ svg {
   text-decoration: none;
   cursor: pointer; }
 
+#robo_merch_container {
+  position: relative; }
+
+#robo_merch_description {
+  z-index: 199;
+  position: absolute;
+  padding: 10px;
+  border: solid 1px #f7f1c3;
+  border-radius: 10px;
+  margin: 10px;
+  background-color: #385228;
+  opacity: 0.95;
+  font-size: 2.1vw; }
+
+#robo_merch_description h2 {
+  text-align: center;
+  margin: 0;
+  opacity: 1; }
+
+#robo_merch_description p {
+  padding: 0 10px 10px 20px;
+  margin: 0;
+  opacity: 1; }
+
+#close_robo_desc_button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer; }
+
 .contact_padding {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -582,7 +614,7 @@ input[type=submit] {
 @media (max-width: 1150px) {
   .sticky_projects {
     position: sticky;
-    top: -300px; } }
+    top: -700px; } }
 @media (max-width: 950px) {
   .sticky_about {
     position: sticky;

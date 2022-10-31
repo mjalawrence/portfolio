@@ -91,7 +91,7 @@ body {
 
 .sticky_projects {
     position: sticky;
-    top: -700px;
+    top: -1000px;
 }
 
 .sticky_bottom {
@@ -454,6 +454,26 @@ svg {
     @include close_button;
 }
 
+#robo_merch_container {
+    position: relative;
+}
+
+#robo_merch_description {
+    @include description_modal;
+}
+
+#robo_merch_description h2 {
+    @include description_header;
+}
+
+#robo_merch_description p {
+    @include description_text;
+}
+
+#close_robo_desc_button {
+    @include close_button;
+}
+
 .contact_padding {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -596,7 +616,7 @@ input[type=submit] {
 
     .sticky_projects {
         position: sticky;
-        top: -300px;
+        top: -700px;
     }
 }
 

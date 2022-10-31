@@ -70,6 +70,7 @@ function openDescriptionModal(readMore, description) {
 openDescriptionModal("food_delivered", "food_delivered_description")
 openDescriptionModal("penny_lane", "penny_lane_description")
 openDescriptionModal("gopher_glory", "gopher_glory_description")
+openDescriptionModal("robo_merch", "robo_merch_description")
 
 //Close Modal
 function closeDescriptionModal(closeButton, description) {
@@ -83,6 +84,7 @@ function closeDescriptionModal(closeButton, description) {
 closeDescriptionModal("close_food_delivered_desc_button", "food_delivered_description")
 closeDescriptionModal("close_penny_desc_button", "penny_lane_description")
 closeDescriptionModal("close_gopher_desc_button", "gopher_glory_description")
+closeDescriptionModal("close_robo_desc_button", "robo_merch_description")
 
 
 ////BACK-TO-TOP BUTTON
